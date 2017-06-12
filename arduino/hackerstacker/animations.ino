@@ -241,11 +241,11 @@ void   show_startup_animation()
   matrix.fillScreen(0);
   matrix.setCursor(x, 1);
   matrix.setTextColor(matrix.Color(0,0,255));
-  matrix.print(F(" Hacker"));
+  matrix.print(F("  MODULAR 2017  "));
   
   
-  
-  if(--x < -44) {
+  x=x-1;
+  if(x < -100) {
     x = matrix.width();
     counter++;
   }    
@@ -262,10 +262,10 @@ void   show_startup_animation()
   
   matrix.setCursor(x, 9);
   matrix.setTextColor(matrix.Color(0,255,0));
-  matrix.print(F("Stacker"));
+  matrix.print(F("OPENLAB AUGSBURG"));
   
   matrix.show();
-  delay(60);
+  delay(250);
 
   }
     

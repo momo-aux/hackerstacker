@@ -37,12 +37,12 @@ GPL 2.0,  thrown together by overflo from hackerspaceshop.com / metalab.at
 
 // where is the BUTTON?
 // needs to be interrupt enabled pin
-#define BUTTON_PIN 2
+#define BUTTON_PIN 3
 
 
 // the led on the button
 // we will dim this with PWM
-#define LED_PIN 3
+#define LED_PIN 4
 
 
 // the buzzer, we will drive this with PWM tone() function
@@ -129,7 +129,7 @@ GPL 2.0,  thrown together by overflo from hackerspaceshop.com / metalab.at
 // color data.
 Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(8, 8, 1, 2, MATRIX_PIN,
   NEO_TILE_TOP   + NEO_TILE_LEFT   + NEO_TILE_ROWS   + NEO_TILE_PROGRESSIVE +
-  NEO_MATRIX_TOP + NEO_MATRIX_LEFT + NEO_MATRIX_ROWS + NEO_MATRIX_ZIGZAG,
+  NEO_MATRIX_TOP + NEO_MATRIX_RIGHT + NEO_MATRIX_ROWS + NEO_MATRIX_ZIGZAG,
   NEO_GRB + NEO_KHZ800);
 
 
@@ -378,6 +378,7 @@ void loop() {
 
   //delay(100);
   button_pressed=0;
+  //waitforactivation=1;
   run_game();  
     
 }
